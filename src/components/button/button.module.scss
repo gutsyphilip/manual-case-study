@@ -3,8 +3,9 @@
 @import "../../styles/variables";
 
 .button {
+  font-family: Montserrat, sans-serif;
   max-height: to-rem(50);
-  padding: to-rem(12 22);
+  padding: to-rem(16 38);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -16,10 +17,10 @@
   background-color: $white;
   box-sizing: border-box;
   cursor: pointer;
-  font-size: to-rem(14);
+  font-size: to-rem(12);
   font-weight: 600;
   letter-spacing: 0.02rem;
-  line-height: 2;
+  line-height: normal;
   overflow: visible;
   text-align: center;
   text-decoration: none;
@@ -52,11 +53,11 @@
   }
 
   &_shadow {
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 30px -20px rgba(0, 0, 0, 0.5);
   }
 
   &_rounded {
-    border-radius: to-rem(24);
+    border-radius: to-rem(49.5);
   }
 
   // Button contents
@@ -83,6 +84,15 @@
     color: $white;
     fill: $white !important;
     background-color: $manual-green;
+    svg {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+  &_themedAlt {
+    color: $white;
+    fill: $white !important;
+    background-color: $manual-light-green;
     svg {
       fill: $white;
       stroke: $white;

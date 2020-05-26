@@ -8,21 +8,32 @@
     "../../../assets/images/hero-bg@2x.png" 2x,
     "../../../assets/images/hero-bg@3x.png" 3x
   );
-  background-position: center;
-  background-size: cover;
+  background-color: #b8e6e3;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 115%;
   height: to-rem(680);
-  padding: to-rem(30 40);
+  padding: to-rem(30 15);
+  width: 100%;
 
   @include md() {
     padding: to-rem(30 80);
+    background-size: 90%;
   }
 
   &_caption {
     &_title {
+      font-family: Montserrat, sans-serif;
       max-width: to-rem(600);
       margin-top: to-rem(104.6);
-      font-size: to-rem(82);
+      font-size: to-rem(40);
       line-height: 1.2;
+      @include md() {
+        font-size: to-rem(64);
+      }
+      @include lg() {
+        font-size: to-rem(82);
+      }
     }
 
     &_description {
@@ -34,8 +45,9 @@
     }
 
     &_button {
-      margin-top: to-rem(38);
-      margin-left: to-rem(10);
+      margin: to-rem(38 10 120);
+      width: to-rem(200);
+      height: to-rem(48);
     }
   }
 }
