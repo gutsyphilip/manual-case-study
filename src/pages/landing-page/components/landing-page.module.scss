@@ -1,0 +1,21 @@
+@import "../../../styles/breakpoint";
+@import "../../../styles/converter";
+@import "../../../styles/variables";
+
+.hero {
+  background-image: image-set(
+    "../../../assets/images/hero-bg.png" 1x,
+    "../../../assets/images/hero-bg@2x.png" 2x,
+    "../../../assets/images/hero-bg@3x.png" 3x
+  );
+  background-position: center;
+  background-size: cover;
+  height: to-rem(680);
+  padding: to-rem(30 80);
+  &_title {
+    margin-top: to-rem(104.6);
+    font-size: to-rem(82);
+    max-width: to-rem(600);
+    line-height: 1.2;
+  }
+}

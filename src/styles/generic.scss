@@ -99,18 +99,6 @@ select {
   }
 }
 
-input:read-only {
-  background-color: $light-grey !important;
-  background-image: url("../assets/svgs/icons/lock.svg");
-  background-size: to-rem(20);
-  background-repeat: no-repeat;
-  background-position: right 5px bottom 45%;
-}
-input[type="checkbox"] {
-  -moz-appearance: checkbox;
-  -webkit-appearance: checkbox;
-}
-
 select {
   width: 100%;
   margin: 0;
