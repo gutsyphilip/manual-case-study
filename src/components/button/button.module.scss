@@ -1,0 +1,113 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.button {
+  max-height: to-rem(50);
+  padding: to-rem(12 22);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s cubic-bezier(0.76, 0, 0.24, 1);
+  -webkit-appearance: none;
+  border-style: none;
+  background-color: $white;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: to-rem(14);
+  font-weight: 600;
+  letter-spacing: 0.02rem;
+  line-height: 2;
+  overflow: visible;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  color: $manual-green;
+
+  // Button states
+  &__disabled {
+    cursor: not-allowed;
+    background-color: #d0d6e1 !important;
+  }
+
+  &__loading {
+    cursor: not-allowed !important;
+  }
+
+  &:hover {
+    opacity: 0.9;
+    svg {
+      &:last-child {
+        // padding-left: to-rem(12);
+      }
+    }
+  }
+
+  // Button forms
+  &_block {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  &_shadow {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+  }
+
+  &_rounded {
+    border-radius: to-rem(24);
+  }
+
+  // Button contents
+  svg {
+    transition: all 0.3s ease-in-out;
+    height: to-rem(12);
+    width: to-rem(12);
+    &:first-child {
+      margin-right: to-rem(8);
+    }
+    &:last-child {
+      margin-left: to-rem(8);
+    }
+  }
+
+  // &_spinner {
+  //   position: absolute;
+  //   width: to-rem(30) !important;
+  //   height: to-rem(30) !important;
+  // }
+
+  // Button variants
+  &_themed {
+    color: $white;
+    fill: $white !important;
+    background-color: $manual-green;
+    svg {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+
+  &_success {
+    color: #10b683;
+    background: #e6f8f3;
+  }
+
+  &_danger {
+    color: $white;
+    background: $danger;
+  }
+
+  &_white {
+    color: $manual-green;
+    background: $white;
+  }
+
+  // Outlined button styles
+  &_outlineThemed {
+    color: $manual-green;
+    fill: $manual-green !important;
+    border: 1px solid $manual-green;
+  }
+}

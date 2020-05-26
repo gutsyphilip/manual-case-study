@@ -11,11 +11,31 @@
   background-position: center;
   background-size: cover;
   height: to-rem(680);
-  padding: to-rem(30 80);
-  &_title {
-    margin-top: to-rem(104.6);
-    font-size: to-rem(82);
-    max-width: to-rem(600);
-    line-height: 1.2;
+  padding: to-rem(30 40);
+
+  @include md() {
+    padding: to-rem(30 80);
+  }
+
+  &_caption {
+    &_title {
+      max-width: to-rem(600);
+      margin-top: to-rem(104.6);
+      font-size: to-rem(82);
+      line-height: 1.2;
+    }
+
+    &_description {
+      max-width: to-rem(400);
+      margin-top: to-rem(22);
+      margin-left: to-rem(10);
+      font-size: to-rem(18);
+      line-height: 1.44;
+    }
+
+    &_button {
+      margin-top: to-rem(38);
+      margin-left: to-rem(10);
+    }
   }
 }
