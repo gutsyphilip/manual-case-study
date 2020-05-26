@@ -1,0 +1,193 @@
+@import "variables";
+@import "converter";
+@import "breakpoint";
+@import "normalize";
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+
+  // @include md() {
+  //   font-size: 90%;
+  // }
+  // @include xl() {
+  //   font-size: 100%;
+  // }
+}
+
+::selection {
+  background: $brass-theme-color;
+  color: #fff;
+  text-shadow: none;
+}
+
+body {
+  font-family: Helvetica, Arial, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0 auto;
+  color: $text-dark;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus,
+  &:visited,
+  &:active {
+    outline: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  color: $text-dark;
+}
+
+strong {
+  color: $text-dark;
+  font-weight: 600;
+}
+// Form fields General Styling
+input,
+select {
+  background-color: #fff;
+  border: 1px solid rgba(4, 5, 6, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $text-light;
+  display: inline-block;
+  font-size: 0.85rem;
+  max-height: 50px;
+  letter-spacing: 0.01rem;
+  margin: 0;
+  max-width: 100%;
+  overflow: visible;
+  padding: 0 16px;
+  transition: color 0.2s ease-in-out;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:focus {
+    outline: 0;
+    background-color: #fff;
+    border-color: $brass-theme-color;
+  }
+}
+
+input:read-only {
+  background-color: $light-grey !important;
+  background-image: url("../assets/svgs/icons/lock.svg");
+  background-size: to-rem(20);
+  background-repeat: no-repeat;
+  background-position: right 5px bottom 45%;
+}
+input[type="checkbox"] {
+  -moz-appearance: checkbox;
+  -webkit-appearance: checkbox;
+}
+
+select {
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 8px),
+    calc(100% - 15px) calc(1em + 8px), calc(100% - 2.5em) 0.9em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+textarea {
+  background-color: #fff;
+  border: 1px solid rgba(4, 5, 6, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $text-light;
+  display: inline-block;
+  font-size: 0.85rem;
+  min-height: to-rem(100);
+  letter-spacing: 0.01rem;
+  margin: 0;
+  max-width: 100%;
+  overflow: visible;
+  padding: 0 16px;
+  transition: color 0.2s ease-in-out;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: to-rem(16);
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+// Just testing page transitions
+.page-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+// HIDE FUSION CHARTS TRIAL
+svg {
+  > g[class^="raphael-group"]:nth-last-child(2) {
+    > text {
+      display: none !important;
+    }
+  }
+}
+
+// Text color codes
+.credit {
+  color: $success !important;
+}
+.debit {
+  color: $danger !important;
+}
