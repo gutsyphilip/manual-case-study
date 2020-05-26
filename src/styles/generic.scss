@@ -2,6 +2,7 @@
 @import "converter";
 @import "breakpoint";
 @import "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -59,6 +60,9 @@ h6 {
   color: $manual-green;
 }
 
+img {
+  touch-action: manipulation;
+}
 strong {
   color: $manual-green;
   font-weight: 600;
@@ -133,40 +137,4 @@ textarea {
 fieldset {
   padding: 0;
   border: 0;
-}
-
-// Just testing page transitions
-.page-enter {
-  opacity: 0;
-  transform: scale(0.9);
-}
-.page-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 300ms, transform 300ms;
-}
-.page-exit {
-  opacity: 1;
-}
-.page-exit-active {
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 300ms, transform 300ms;
-}
-
-// HIDE FUSION CHARTS TRIAL
-svg {
-  > g[class^="raphael-group"]:nth-last-child(2) {
-    > text {
-      display: none !important;
-    }
-  }
-}
-
-// Text color codes
-.credit {
-  color: $success !important;
-}
-.debit {
-  color: $danger !important;
 }
