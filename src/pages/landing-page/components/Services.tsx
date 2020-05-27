@@ -10,7 +10,7 @@ const Services: React.FC<Props> = (props) => {
       <header className={styles.services_header}>
         <h2 className={styles.services_header_title}>What we can help with</h2>
       </header>
-      <main className={styles.services_list}>
+      <div className={styles.services_list}>
         {SERVICES_LIST.map(
           ({ tagLine, title, description, src, srcSet }, index) => {
             return (
@@ -39,7 +39,7 @@ const Services: React.FC<Props> = (props) => {
             );
           }
         )}
-      </main>
+      </div>
     </section>
   );
 };
