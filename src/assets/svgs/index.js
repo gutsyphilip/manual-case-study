@@ -8,3 +8,5 @@ export { ReactComponent as LinkedInIcon } from "./icons/linkedin.svg";
 
 // General Icons
 export { ReactComponent as CloseIcon } from "./icons/close.svg";
+export { ReactComponent as SmileIcon } from "./icons/smile.svg";
+export { ReactComponent as FrownIcon } from "./icons/frown.svg";

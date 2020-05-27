@@ -1,4 +1,3 @@
-import { CloseIcon } from "../../assets/svgs";
 import cx from "classnames";
 import React from "react";
 import { createPortal } from "react-dom";
@@ -6,7 +5,8 @@ import { createPortal } from "react-dom";
 import styles from "./modal.module.scss";
 
 interface Props {
-  handleClose: (e: React.MouseEvent) => void;
+  className: string;
+  handleClose?: (e: React.MouseEvent) => void;
   size: string;
   show: boolean;
   title?: string;
@@ -25,6 +25,7 @@ class Modal extends React.Component<Props, {}> {
   }
   render() {
     const {
+      className,
       children,
       handleClose,
       size,
@@ -36,22 +37,13 @@ class Modal extends React.Component<Props, {}> {
     const content = (
       <>
         <div
-          className={cx(styles.modal, {
+          className={cx(styles.modal, className, {
             [styles.modal_small]: size === "s",
             [styles.modal_medium]: size === "m",
             [styles.modal_cover]: size === "cover",
           })}
           {...rest}
         >
-          <header className={styles.modal_header}>
-            <div className={styles.modal_header_title_row}>
-              <CloseIcon
-                className={styles.modal_header_closeIcon}
-                onClick={handleClose}
-              />
-            </div>
-          </header>
-
           <main className={styles.modal_body}>{children}</main>
         </div>
         {show && (

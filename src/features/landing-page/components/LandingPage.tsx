@@ -5,16 +5,27 @@ import Footer from "./Footer";
 import { Quiz } from "../../quiz";
 
 interface Props {}
-interface State {}
+interface State {
+  showQuizModal: boolean;
+}
 
 class LandingPage extends Component<Props, State> {
-  state = {};
+  state = {
+    showQuizModal: false,
+  };
+
+  handleSetShowQuizModal = (value: boolean): void => {
+    this.setState({ showQuizModal: value });
+  };
 
   render() {
+    const { showQuizModal } = this.state;
     return (
       <>
-        <Quiz />
-        <Hero />
+        {showQuizModal && (
+          <Quiz setShowQuizModal={this.handleSetShowQuizModal} />
+        )}
+        <Hero setShowQuizModal={this.handleSetShowQuizModal} />
         <main role="main">
           <Services />
         </main>
