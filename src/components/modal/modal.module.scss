@@ -1,0 +1,68 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.modal {
+  background: #fff;
+  position: absolute;
+  z-index: 10;
+  width: 90vw;
+  height: fit-content;
+  padding: to-rem(32);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0 5px 10px 2px rgba(195, 192, 192, 0.5);
+  border-radius: to-rem(8);
+  input,
+  select {
+    min-height: to-rem(45);
+  }
+  &_cover {
+    width: 100vw;
+    height: 100vh;
+    padding: to-rem(32);
+  }
+  &_small {
+    @include md() {
+      width: to-rem(574);
+      height: fit-content;
+      padding: to-rem(32);
+    }
+  }
+  &_medium {
+    @include md() {
+      width: to-rem(754);
+      height: fit-content;
+      padding: to-rem(32);
+    }
+  }
+  &_header {
+    margin-bottom: to-rem(32);
+    display: flex;
+    justify-content: flex-end;
+    &_closeIcon {
+      cursor: pointer;
+      fill: $manual-green;
+      stroke: $manual-green;
+      height: to-rem(50);
+      width: to-rem(50);
+    }
+  }
+  &_body {
+  }
+  &_mask {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    -webkit-backdrop-filter: blur(to-rem(39));
+    backdrop-filter: blur(to-rem(39));
+    background-color: #10203d;
+    opacity: 0.7;
+  }
+}

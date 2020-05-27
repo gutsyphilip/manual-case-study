@@ -119,6 +119,7 @@
         z-index: -1;
         white-space: nowrap;
         @include sm() {
+          width: auto;
           position: absolute;
           top: -6.25rem;
           left: 31%;
@@ -141,7 +142,12 @@
           flex-direction: row-reverse;
         }
         &::before {
-          left: -31%;
+          @include sm() {
+            left: 10%;
+          }
+          @include md() {
+            left: 1%;
+          }
         }
       }
       &_image {
