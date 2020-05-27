@@ -8,7 +8,7 @@
     "../../../assets/images/hero-bg@2x.png" 2x,
     "../../../assets/images/hero-bg@3x.png" 3x
   );
-  background-color: #b8e6e3;
+  background-color: $light-bg;
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 115%;
@@ -171,6 +171,110 @@
           margin-top: to-rem(12);
         }
       }
+    }
+  }
+}
+
+.footer {
+  &_main {
+    width: 100%;
+    background: #e5f5f4;
+    display: flex;
+    flex-wrap: wrap;
+    padding: to-rem(39 20);
+
+    @include md() {
+      padding: to-rem(56);
+    }
+
+    @include lg() {
+      padding: to-rem(78);
+    }
+    &_logo {
+      width: to-rem(80);
+      height: to-rem(75);
+      margin-bottom: to-rem(50);
+
+      @include lg() {
+        margin-bottom: to-rem(0);
+        margin-right: to-rem(322);
+      }
+    }
+
+    &_nav {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(to-rem(127), 1fr));
+      gap: to-rem(59);
+      @include lg() {
+        flex: 1;
+        grid-template-columns: repeat(auto-fill, minmax(to-rem(127), 1fr));
+      }
+
+      &_group {
+        &_header {
+          &_title {
+            font-family: Montserrat;
+            font-size: to-rem(12);
+            letter-spacing: to-rem(2.4);
+            color: $manual-light-green;
+            text-transform: uppercase;
+          }
+        }
+        &_list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          margin-top: to-rem(17);
+          &_item {
+            &:not(:first-child) {
+              margin-top: to-rem(17);
+            }
+            a {
+              text-decoration: none;
+              font-size: to-rem(14);
+              font-weight: normal;
+              line-height: 2.57;
+              &:hover {
+                color: $manual-light-green;
+              }
+            }
+          }
+        }
+        &_icons {
+          list-style: none;
+          display: flex;
+          margin-top: to-rem(31);
+          &_icon {
+            &:not(:first-child) {
+              margin-left: to-rem(30);
+            }
+          }
+        }
+      }
+    }
+  }
+  &_sub {
+    background: #e5f5f4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: to-rem(0 20);
+
+    @include lg() {
+      padding: to-rem(0 40);
+    }
+    hr {
+      opacity: 0.3;
+      border-top: solid to-rem(1) #6c6c6c;
+    }
+    &_credits {
+      font-family: "Open Sans";
+      font-size: to-rem(12);
+      line-height: 1.83;
+      text-align: center;
+      color: rgba(108, 108, 108, 0.5);
+      padding: to-rem(27 0);
     }
   }
 }
