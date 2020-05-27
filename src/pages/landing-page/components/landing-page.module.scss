@@ -221,7 +221,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(to-rem(127), 1fr));
-      gap: to-rem(20);
+      gap: to-rem(59 20);
       @include lg() {
         flex: 1;
         grid-template-columns: repeat(auto-fill, minmax(to-rem(127), 1fr));
