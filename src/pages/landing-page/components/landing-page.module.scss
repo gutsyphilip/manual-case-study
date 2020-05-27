@@ -12,23 +12,35 @@
   background-position: right bottom;
   background-repeat: no-repeat;
   background-size: 115%;
-  height: to-rem(680);
+  height: to-rem(600);
   padding: to-rem(30 15);
   width: 100%;
+
+  @include sm() {
+    height: to-rem(640);
+  }
 
   @include md() {
     padding: to-rem(30 80);
     background-size: 90%;
+    height: to-rem(680);
   }
 
   &_caption {
+    margin: to-rem(52.3 0 60);
+    @include md() {
+      margin: to-rem(104.6 0 120);
+    }
     &_title {
       font-family: Montserrat, sans-serif;
       max-width: to-rem(600);
-      margin-top: to-rem(104.6);
-      font-size: to-rem(40);
+      font-size: to-rem(38);
       line-height: 1.2;
       text-transform: uppercase;
+
+      @include sm() {
+        font-size: to-rem(52);
+      }
       @include md() {
         font-size: to-rem(64);
       }
@@ -49,7 +61,7 @@
     }
 
     &_button {
-      margin: to-rem(38 10 120);
+      margin: to-rem(38 10 0);
       width: to-rem(200);
       height: to-rem(48);
     }
@@ -99,15 +111,17 @@
         content: "0" counter(article);
         font-family: Montserrat, sans-serif;
         font-weight: bold;
-        font-size: to-rem(200);
-        position: absolute;
-        top: to-rem(-50);
-        left: 31%;
+        font-size: to-rem(100);
+        margin-bottom: to-rem(-50);
+        width: 100%;
         color: #eeeeee;
         height: 100%;
         z-index: -1;
         white-space: nowrap;
         @include sm() {
+          position: absolute;
+          top: -6.25rem;
+          left: 31%;
           font-size: to-rem(310);
         }
         @include md() {
@@ -127,7 +141,7 @@
           flex-direction: row-reverse;
         }
         &::before {
-          left: 0;
+          left: -31%;
         }
       }
       &_image {
@@ -191,11 +205,13 @@
       padding: to-rem(78);
     }
     &_logo {
-      width: to-rem(80);
-      height: to-rem(75);
+      width: to-rem(50);
+      height: to-rem(45);
       margin-bottom: to-rem(50);
 
       @include lg() {
+        width: to-rem(80);
+        height: to-rem(75);
         margin-bottom: to-rem(0);
         margin-right: to-rem(322);
       }
@@ -205,10 +221,11 @@
       width: 100%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(to-rem(127), 1fr));
-      gap: to-rem(59);
+      gap: to-rem(20);
       @include lg() {
         flex: 1;
         grid-template-columns: repeat(auto-fill, minmax(to-rem(127), 1fr));
+        gap: to-rem(59);
       }
 
       &_group {
