@@ -30,7 +30,7 @@ class Modal extends React.Component<Props, {}> {
   componentWillUnmount() {
     this.modalRoot.removeChild(this.element);
     this.appRoot.setAttribute("aria-hidden", "false");
-    
+
     // When the modal is hidden, we want to remain at the top of the scroll position
     document.body.style.position = "";
     document.body.style.top = "";

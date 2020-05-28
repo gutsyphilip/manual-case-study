@@ -55,11 +55,13 @@ const Question = ({
   };
 
   useEffect(() => {
-    activeRef?.current?.scrollIntoView({
-      block: "end",
-      behavior: "smooth",
-    });
-  }, [activeRef]);
+    if (activeQuestion > 1) {
+      activeRef?.current?.scrollIntoView({
+        block: "end",
+        behavior: "smooth",
+      });
+    }
+  }, [activeRef, activeQuestion]);
 
   return (
     <div
