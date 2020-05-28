@@ -134,7 +134,10 @@
         }
       }
       &:not(:first-child) {
-        margin-top: to-rem(80);
+        margin-top: to-rem(20);
+        @include md() {
+          margin-top: to-rem(80);
+        }
       }
       &:nth-child(even) {
         text-align: right;
