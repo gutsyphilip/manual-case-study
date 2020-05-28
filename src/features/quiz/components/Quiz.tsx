@@ -46,7 +46,10 @@ class Quiz extends Component<Props, State> {
   };
 
   handleSubmitQuiz = () => {
-    this.setState({ isCompleted: true });
+    const { userResponses } = this.state;
+    if (Object.keys(userResponses).length === questions.length) {
+      this.setState({ isCompleted: true });
+    }
   };
 
   render() {

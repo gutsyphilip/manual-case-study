@@ -51,12 +51,10 @@
     &:not(:first-child) {
       &::before {
         content: "";
-        height: to-rem(0);
-        // width: 100%;
         display: block;
 
         @include lg() {
-          height: to-rem(150);
+          height: to-rem(120);
         }
       }
     }
@@ -154,6 +152,14 @@
     }
     @include lg() {
       padding: to-rem(100 100 0);
+    }
+    &::before {
+      content: "";
+      display: block;
+
+      @include lg() {
+        height: to-rem(120);
+      }
     }
 
     &_icon {

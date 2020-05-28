@@ -28,6 +28,7 @@ const Question = ({
   userResponses,
   activeRef,
 }: Props) => {
+  console.log(activeRef);
   const renderOptions = (): React.ReactNode => {
     return options.map((option, index) => {
       const label: string = Object.keys(option)[0];
@@ -56,9 +57,12 @@ const Question = ({
 
   useEffect(() => {
     if (activeQuestion > 1) {
+      // console.log(activeRef.current.offsetTop);
+      // activeRef.current.style.top = "100px";
       activeRef?.current?.scrollIntoView({
-        block: "end",
         behavior: "smooth",
+        block: "end",
+        inline: "nearest",
       });
     }
   }, [activeRef, activeQuestion]);
