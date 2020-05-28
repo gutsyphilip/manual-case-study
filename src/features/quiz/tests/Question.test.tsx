@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { render } from "@testing-library/react";
 import Question from "../components/Question";
+import { Simulate } from "react-dom/test-utils";
 
 const QuestionProps = {
   data: {
@@ -37,8 +38,37 @@ const QuestionProps = {
   activeQuestion: 1,
   handleSetResponse: jest.fn(() => {}),
   userResponses: {},
+  activeRef: {
+    current: {
+      scrollIntoView: jest.fn(),
+    },
+  },
 };
 
 test("question is properly displayed to user", () => {
-  const { getByLabelText } = render(<Question {...QuestionProps} />);
+  const { getByText } = render(<Question {...QuestionProps} />);
+  const questionNode = getByText(QuestionProps.data.question);
+  expect(questionNode).toMatchSnapshot();
 });
+
+test("options are properly displayed to user", () => {
+  const { getByTestId } = render(<Question {...QuestionProps} />);
+  const optionsListNode = getByTestId("options-list");
+  expect(optionsListNode).toMatchSnapshot();
+});
+
+test("user can click rendered options to set response", () => {
+  const { getAllByTestId } = render(<Question {...QuestionProps} />);
+  const optionNodes = getAllByTestId("option");
+  optionNodes.forEach((option) => {
+    Simulate.click(option);
+  });
+  expect(QuestionProps.handleSetResponse).toHaveBeenCalledTimes(6);
+});
+
+// test("scroll to next question is trigerred on response selection", () => {
+//   const { getAllByTestId } = render(<Question {...QuestionProps} />);
+//   const optionNodes = getAllByTestId("option");
+//   Simulate.click(optionNodes[0]);
+//   expect(QuestionProps.activeRef.current.scrollIntoView).toHaveBeenCalled();
+// });

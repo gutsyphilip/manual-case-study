@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`options are properly displayed to user 1`] = `
+<div
+  class="quizModal_question_options"
+  data-testid="options-list"
+>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Temples"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/temples-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/temples-hairloss%402x.png 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Temples
+    </div>
+  </div>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Temples & Crown"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/templescrown-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/templescrown-hairloss%402 x.png 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Temples & Crown
+    </div>
+  </div>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Patchy"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/patchy-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/patchy-hairloss%402x.png 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Patchy
+    </div>
+  </div>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Moderate"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/moderate-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/moderate-hairloss%402x.pn g 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Moderate
+    </div>
+  </div>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Extensive"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/extensive-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/extensive-hairloss%402x.pn g 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Extensive
+    </div>
+  </div>
+  <div
+    class="quizModal_question_options_item"
+    data-testid="option"
+  >
+    <div
+      class="quizModal_question_options_item_label"
+    >
+      <img
+        alt="Complete"
+        src="https://s3-eu-west-1.amazonaws.com/manualco/questions/complete-hairloss.png"
+        srcset="https://s3-eu-west-1.amazonaws.com/manualco/questions/complete-hairloss%402x.pn g 2x"
+      />
+    </div>
+    <div
+      class="quizModal_question_options_item_text"
+    >
+      Complete
+    </div>
+  </div>
+</div>
+`;
+
+exports[`question is properly displayed to user 1`] = `
+<h1
+  class="quizModal_question_title"
+>
+  Which image best matches your hair loss?
+</h1>
+`;

@@ -37,6 +37,7 @@ const Question = ({
             [styles.quizModal_question_options_item__selected]:
               userResponses[question] === options[index][label],
           })}
+          data-testid="option"
           key={`${label}`}
           onClick={() => {
             handleSetResponse(question, options[index][label], number);
@@ -73,7 +74,13 @@ const Question = ({
         className={styles.quizModal_question_label}
       >{`Question ${number}`}</h4>
       <h1 className={styles.quizModal_question_title}>{question}</h1>
-      <div className={styles.quizModal_question_options}>{renderOptions()}</div>
+
+      <div
+        className={styles.quizModal_question_options}
+        data-testid="options-list"
+      >
+        {renderOptions()}
+      </div>
     </div>
   );
 };

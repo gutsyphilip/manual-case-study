@@ -15,7 +15,6 @@ interface Props {
 class Modal extends React.Component<Props, {}> {
   element: HTMLDivElement = document.createElement("div");
   modalRoot: HTMLElement = document.getElementById("modal");
-  appRoot: HTMLElement = document.getElementById("root");
 
   componentDidMount() {
     this.modalRoot.appendChild(this.element);
@@ -24,12 +23,10 @@ class Modal extends React.Component<Props, {}> {
     // document.body.style.position = "fixed";
     // document.body.style.top = `-${window.scrollY}px`;
 
-    this.appRoot.setAttribute("aria-hidden", "true");
     this.modalRoot.focus();
   }
   componentWillUnmount() {
     this.modalRoot.removeChild(this.element);
-    this.appRoot.setAttribute("aria-hidden", "false");
 
     // When the modal is hidden, we want to remain at the top of the scroll position
     document.body.style.position = "";
@@ -59,9 +56,6 @@ class Modal extends React.Component<Props, {}> {
         >
           <main className={styles.modal_body}>{children}</main>
         </div>
-        {show && (
-          <div className={styles.modal_mask} onClick={handleClose}></div>
-        )}
       </>
     );
     return createPortal(content, this.element);
