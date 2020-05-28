@@ -59,7 +59,7 @@ const Question = ({
     if (activeQuestion > 1) {
       activeRef?.current?.scrollIntoView({
         behavior: "smooth",
-        block: "end",
+        block: "nearest",
         inline: "nearest",
       });
     }
