@@ -57,8 +57,6 @@ const Question = ({
 
   useEffect(() => {
     if (activeQuestion > 1) {
-      // console.log(activeRef.current.offsetTop);
-      // activeRef.current.style.top = "100px";
       activeRef?.current?.scrollIntoView({
         behavior: "smooth",
         block: "end",

@@ -29,18 +29,20 @@ class Quiz extends Component<Props, State> {
     isCompleted: false,
   };
 
-  handleSetResponse = (
+  handleSetResponse = async (
     question: string,
     response: string | boolean,
     questionNumber: number
   ) => {
     const { userResponses } = this.state;
-    this.setState({
+    await this.setState({
       userResponses: { ...userResponses, [question]: response },
     });
-    if (questionNumber < 3) {
-      this.setState({ activeQuestion: questionNumber + 1 });
-    } else {
+    console.log(questionNumber, questions.length);
+    if (questionNumber <= questions.length) {
+      await this.setState({ activeQuestion: questionNumber + 1 });
+    }
+    if (questionNumber === questions.length) {
       this.handleSubmitQuiz();
     }
   };

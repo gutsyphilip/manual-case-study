@@ -21,8 +21,8 @@ class Modal extends React.Component<Props, {}> {
     this.modalRoot.appendChild(this.element);
 
     // When the modal is shown, fix body
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${window.scrollY}px`;
+    // document.body.style.position = "fixed";
+    // document.body.style.top = `-${window.scrollY}px`;
 
     this.appRoot.setAttribute("aria-hidden", "true");
     this.modalRoot.focus();
