@@ -10,7 +10,8 @@ interface Props {
   };
   number: number;
   activeQuestion: number;
-  activeRef: any;
+  // TODO: Resolve ref type issue
+  activeRef?: any;
   userResponses: { [key: string]: string | boolean };
   handleSetResponse: (
     question: string,

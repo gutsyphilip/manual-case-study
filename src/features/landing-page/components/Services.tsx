@@ -1,17 +1,24 @@
 import React from "react";
 
 import styles from "./landing-page.module.scss";
-import { SERVICES_LIST } from "../data";
-interface Props {}
+interface Props {
+  servicesList: {
+    tagLine: string;
+    title: string;
+    description: string;
+    src: string;
+    srcSet: string[];
+  }[];
+}
 
-const Services: React.FC<Props> = (props) => {
+const Services: React.FC<Props> = ({ servicesList }) => {
   return (
     <section className={styles.services}>
       <header className={styles.services_header}>
         <h2 className={styles.services_header_title}>What we can help with</h2>
       </header>
       <div className={styles.services_list}>
-        {SERVICES_LIST.map(
+        {servicesList.map(
           ({ tagLine, title, description, src, srcSet }, index) => {
             return (
               <div
