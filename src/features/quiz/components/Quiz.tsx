@@ -38,7 +38,7 @@ class Quiz extends Component<Props, State> {
     await this.setState({
       userResponses: { ...userResponses, [question]: response },
     });
-    console.log(questionNumber, questions.length);
+
     if (questionNumber <= questions.length) {
       await this.setState({ activeQuestion: questionNumber + 1 });
     }

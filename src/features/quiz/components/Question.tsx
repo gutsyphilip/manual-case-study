@@ -28,7 +28,6 @@ const Question = ({
   userResponses,
   activeRef,
 }: Props) => {
-  console.log(activeRef);
   const renderOptions = (): React.ReactNode => {
     return options.map((option, index) => {
       const label: string = Object.keys(option)[0];
