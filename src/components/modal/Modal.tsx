@@ -10,28 +10,30 @@ interface Props {
   size: string;
   show: boolean;
   title?: string;
-  description?: string;
 }
 
 class Modal extends React.Component<Props, {}> {
   element: HTMLDivElement = document.createElement("div");
   modalRoot: HTMLElement = document.getElementById("modal");
+  appRoot: HTMLElement = document.getElementById("root");
 
   componentDidMount() {
     this.modalRoot.appendChild(this.element);
+    this.appRoot.setAttribute("aria-hidden", "true");
+    this.modalRoot.focus();
   }
   componentWillUnmount() {
     this.modalRoot.removeChild(this.element);
+    this.appRoot.setAttribute("aria-hidden", "false");
   }
   render() {
     const {
       className,
       children,
       handleClose,
+      title,
       size,
       show,
-      title,
-      description,
       ...rest
     } = this.props;
     const content = (
@@ -42,6 +44,8 @@ class Modal extends React.Component<Props, {}> {
             [styles.modal_medium]: size === "m",
             [styles.modal_cover]: size === "cover",
           })}
+          role="dialog"
+          aria-label={title}
           {...rest}
         >
           <main className={styles.modal_body}>{children}</main>

@@ -51,9 +51,10 @@ class Quiz extends Component<Props, State> {
   render() {
     const { activeQuestion, isCompleted, userResponses } = this.state;
     const { setShowQuizModal } = this.props;
-    const activeRef = React.createRef();
+    const activeRef = React.createRef<HTMLElement>();
     return (
       <Modal
+        title={"Quiz modal"}
         className={styles.quizModal}
         size="cover"
         show={true}

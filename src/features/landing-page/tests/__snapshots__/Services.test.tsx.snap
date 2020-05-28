@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders services based on data list 1`] = `
+<DocumentFragment>
+  <section
+    class="services"
+  >
+    <header
+      class="services_header"
+    >
+      <h2
+        class="services_header_title"
+      >
+        What we can help with
+      </h2>
+    </header>
+    <div
+      class="services_list"
+    >
+      <div
+        class="services_list_item"
+      >
+        <img
+          alt="Hair loss needn’t be irreversible. We can help!"
+          class="services_list_item_image"
+          src="hair-photo.png"
+          srcset="hair-photo@2x.png, hair-photo@3x.png"
+        />
+        <article
+          class="services_list_item_caption"
+        >
+          <h6
+            class="services_list_item_caption_tagLine"
+          >
+            HAIR LOSS
+          </h6>
+          <h3
+            class="services_list_item_caption_title"
+          >
+            Hair loss needn’t be irreversible. We can help!
+          </h3>
+          <p
+            class="services_list_item_caption_description"
+          >
+            Hair loss needn’t be irreversible. There’s a scientifically proven way that’s most effective in keeping and regrowing your hair. It’s all to do with blocking a pesky hormone called DHT. That’s the bad guy behind hair loss. And you can keep him at bay. The choice is yours.
+          </p>
+        </article>
+      </div>
+      <div
+        class="services_list_item"
+      >
+        <img
+          alt="Erections can be a tricky thing. But no need to feel down!"
+          class="services_list_item_image"
+          src="sex-photo.png"
+          srcset="sex-photo@2x.png, sex-photo@3x.png"
+        />
+        <article
+          class="services_list_item_caption"
+        >
+          <h6
+            class="services_list_item_caption_tagLine"
+          >
+            Erectile Dysfunction
+          </h6>
+          <h3
+            class="services_list_item_caption_title"
+          >
+            Erections can be a tricky thing. But no need to feel down!
+          </h3>
+          <p
+            class="services_list_item_caption_description"
+          >
+            There are plenty of reasons why you might be having difficulty in the erection department. We can help you figure out possible reasons why. And prescribe a pill if needed.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

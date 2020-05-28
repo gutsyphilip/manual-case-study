@@ -20,7 +20,7 @@
       padding: to-rem(61);
     }
     @include lg() {
-      padding: to-rem(70 216 20);
+      padding: to-rem(70 100 20);
     }
 
     &_logo {
@@ -44,7 +44,7 @@
       padding: to-rem(61);
     }
     @include lg() {
-      padding: to-rem(0 216 0);
+      padding: to-rem(0 100 0);
     }
 
     &::before {
@@ -147,10 +147,10 @@
     padding: to-rem(130 20);
 
     @include md() {
-      padding: to-rem(180 61);
+      padding: to-rem(100 61);
     }
     @include lg() {
-      padding: to-rem(180 216 0);
+      padding: to-rem(100 100 0);
     }
 
     &_icon {
