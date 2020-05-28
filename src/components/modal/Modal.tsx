@@ -19,12 +19,21 @@ class Modal extends React.Component<Props, {}> {
 
   componentDidMount() {
     this.modalRoot.appendChild(this.element);
+
+    // When the modal is shown, fix body
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${window.scrollY}px`;
+
     this.appRoot.setAttribute("aria-hidden", "true");
     this.modalRoot.focus();
   }
   componentWillUnmount() {
     this.modalRoot.removeChild(this.element);
     this.appRoot.setAttribute("aria-hidden", "false");
+    
+    // When the modal is hidden, we want to remain at the top of the scroll position
+    document.body.style.position = "";
+    document.body.style.top = "";
   }
   render() {
     const {

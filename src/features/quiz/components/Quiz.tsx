@@ -14,6 +14,7 @@ import styles from "./quiz.module.scss";
 
 interface Props {
   setShowQuizModal: (value: boolean) => void;
+  showQuizModal: boolean;
 }
 interface State {
   activeQuestion: number;
@@ -50,15 +51,15 @@ class Quiz extends Component<Props, State> {
 
   render() {
     const { activeQuestion, isCompleted, userResponses } = this.state;
-    const { setShowQuizModal } = this.props;
+    const { setShowQuizModal, showQuizModal } = this.props;
     const activeRef = React.createRef<HTMLElement>();
     return (
       <Modal
         title={"Quiz modal"}
         className={styles.quizModal}
         size="cover"
-        show={true}
-        {...this.props}
+        show={showQuizModal}
+        // {...this.props}
       >
         <header className={styles.quizModal_header}>
           <ManualLogo className={styles.quizModal_header_logo} />

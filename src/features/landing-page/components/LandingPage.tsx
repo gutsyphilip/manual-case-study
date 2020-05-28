@@ -24,7 +24,10 @@ class LandingPage extends Component<Props, State> {
     return (
       <>
         {showQuizModal && (
-          <Quiz setShowQuizModal={this.handleSetShowQuizModal} />
+          <Quiz
+            setShowQuizModal={this.handleSetShowQuizModal}
+            showQuizModal={showQuizModal}
+          />
         )}
         <Hero setShowQuizModal={this.handleSetShowQuizModal} />
         <main role="main">
