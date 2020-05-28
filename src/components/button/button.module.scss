@@ -73,12 +73,6 @@
     }
   }
 
-  // &_spinner {
-  //   position: absolute;
-  //   width: to-rem(30) !important;
-  //   height: to-rem(30) !important;
-  // }
-
   // Button variants
   &_themed {
     color: $white;
@@ -97,16 +91,6 @@
       fill: $white;
       stroke: $white;
     }
-  }
-
-  &_success {
-    color: #10b683;
-    background: #e6f8f3;
-  }
-
-  &_danger {
-    color: $white;
-    background: $danger;
   }
 
   &_white {

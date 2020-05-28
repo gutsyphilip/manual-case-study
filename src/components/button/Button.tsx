@@ -35,7 +35,7 @@ const Button: React.FC<Props> = ({
       })}
       {...props}
     >
-      {loading ? <p>Loading...</p> : [props.children]}
+      {loading ? <span>Loading...</span> : [props.children]}
     </button>
   );
 };
