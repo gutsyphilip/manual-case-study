@@ -65,10 +65,3 @@ test("user can click rendered options to set response", () => {
   });
   expect(QuestionProps.handleSetResponse).toHaveBeenCalledTimes(6);
 });
-
-// test("scroll to next question is trigerred on response selection", () => {
-//   const { getAllByTestId } = render(<Question {...QuestionProps} />);
-//   const optionNodes = getAllByTestId("option");
-//   Simulate.click(optionNodes[0]);
-//   expect(QuestionProps.activeRef.current.scrollIntoView).toHaveBeenCalled();
-// });
