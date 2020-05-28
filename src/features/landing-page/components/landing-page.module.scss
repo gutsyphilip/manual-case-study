@@ -269,8 +269,12 @@
           display: flex;
           margin-top: to-rem(31);
           &_icon {
+            fill: $manual-green;
             &:not(:first-child) {
               margin-left: to-rem(30);
+            }
+            &:hover {
+              fill: $manual-light-green;
             }
           }
         }

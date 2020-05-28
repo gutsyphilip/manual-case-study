@@ -4,9 +4,11 @@ import { ManualLogo } from "../../../assets/svgs";
 
 import styles from "./landing-page.module.scss";
 
-interface Props {}
+interface Props {
+  setShowQuizModal: (value: boolean) => void;
+}
 
-const Hero = (props: Props) => {
+const Hero = ({ setShowQuizModal }: Props) => {
   return (
     <header className={styles.hero}>
       <ManualLogo className={styles.hero_logo} />
@@ -23,6 +25,9 @@ const Hero = (props: Props) => {
           rounded
           shadow
           variant="themedAlt"
+          onClick={() => {
+            setShowQuizModal(true);
+          }}
         >
           TAKE THE QUIZ
         </Button>

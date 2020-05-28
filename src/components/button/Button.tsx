@@ -11,6 +11,7 @@ interface Props {
   rounded?: boolean;
   shadow?: boolean;
   disabled?: boolean;
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 const Button: React.FC<Props> = ({

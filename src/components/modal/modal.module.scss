@@ -8,7 +8,6 @@
   z-index: 10;
   width: 90vw;
   height: fit-content;
-  padding: to-rem(32);
   left: 0;
   right: 0;
   top: 0;
@@ -21,9 +20,10 @@
     min-height: to-rem(45);
   }
   &_cover {
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    padding: to-rem(32);
+    border-radius: to-rem(0);
   }
   &_small {
     @include md() {

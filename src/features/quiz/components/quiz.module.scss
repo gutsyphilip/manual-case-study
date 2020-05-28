@@ -1,0 +1,174 @@
+@import "../../../styles/breakpoint";
+@import "../../../styles/converter";
+@import "../../../styles/variables";
+
+.quizModal {
+  overflow-y: scroll;
+
+  &_header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: to-rem(0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $white;
+    z-index: 3;
+    padding: to-rem(20);
+    @include md() {
+      padding: to-rem(61);
+    }
+    @include lg() {
+      padding: to-rem(70 216 20);
+    }
+
+    &_logo {
+      width: to-rem(60);
+      height: to-rem(55);
+    }
+    &_closeIcon {
+      width: to-rem(60);
+      height: to-rem(55);
+      cursor: pointer;
+    }
+  }
+
+  &_question {
+    height: 100vh;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    padding: to-rem(20);
+
+    @include md() {
+      padding: to-rem(61);
+    }
+    @include lg() {
+      padding: to-rem(0 216 0);
+    }
+
+    &::before {
+      content: "";
+      height: to-rem(150);
+      // width: 100%;
+      display: block;
+
+      @include lg() {
+        height: to-rem(250);
+      }
+    }
+
+    &_label {
+      text-transform: uppercase;
+      color: $manual-light-green;
+    }
+
+    &_title {
+      font-size: to-rem(26);
+      font-family: Montserrat;
+      margin-top: to-rem(20);
+      @include md() {
+        font-size: to-rem(42);
+      }
+    }
+
+    &_options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: to-rem(10);
+      margin: to-rem(50 0);
+
+      @include sm() {
+        margin-top: to-rem(80);
+        grid-template-columns: repeat(auto-fit, minmax(to-rem(154), 1fr));
+        gap: to-rem(50);
+      }
+      &_item {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgb(79, 176, 174);
+        box-shadow: rgba(79, 176, 174, 0.6) 0px 0px 0px 1px inset;
+        cursor: pointer;
+        opacity: 1;
+        will-change: opacity;
+        min-height: to-rem(50);
+        height: 100%;
+        border-radius: 4px;
+        padding: to-rem(3);
+        min-width: to-rem(100);
+        &:hover {
+          background-color: rgba(79, 176, 174, 0.1);
+          box-shadow: rgba(79, 176, 174, 0.8) 0px 0px 0px 2px inset;
+        }
+        &__selected {
+          background-color: rgba(79, 176, 174, 0.1);
+          box-shadow: rgba(79, 176, 174, 0.8) 0px 0px 0px 2px inset;
+          &::before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border-width: 24px;
+            border-style: solid;
+            border-image: initial;
+            border-color: rgb(79, 176, 174) rgb(79, 176, 174) transparent
+              transparent;
+          }
+        }
+        &_label {
+          img {
+            width: to-rem(154);
+            height: to-rem(154);
+          }
+        }
+        &_text {
+          font-size: to-rem(12);
+          @include sm() {
+            font-size: to-rem(12);
+          }
+        }
+      }
+    }
+  }
+
+  &_result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: to-rem(130 20);
+
+    @include md() {
+      padding: to-rem(180 61);
+    }
+    @include lg() {
+      padding: to-rem(180 216 0);
+    }
+
+    &_icon {
+      height: to-rem(80);
+      width: to-rem(80);
+      margin: to-rem(0) auto to-rem(50);
+      text-align: center;
+    }
+
+    &_message {
+      font-size: to-rem(26);
+      font-weight: 500;
+      @include md() {
+        font-size: to-rem(42);
+      }
+      a {
+        color: $manual-light-green;
+      }
+    }
+  }
+}
