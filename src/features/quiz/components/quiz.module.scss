@@ -35,10 +35,10 @@
   }
 
   &_question {
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-    padding: to-rem(20);
+    padding: to-rem( 40 20);
 
     @include md() {
       padding: to-rem(61);
@@ -54,7 +54,7 @@
       display: block;
 
       @include lg() {
-        height: to-rem(250);
+        height: to-rem(300);
       }
     }
 
